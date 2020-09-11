@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6W7-sb-cR4" customClass="FundRaisingFieldView" customModule="FundRaisings" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цель" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSD-cJ-UEA">
+                    <rect key="frame" x="0.0" y="14" width="414" height="16.5"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                    <color key="textColor" red="0.42745098040000001" green="0.47058823529999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Название сбора" translatesAutoresizingMaskIntoConstraints="NO" id="OiZ-Bw-JaP">
+                    <rect key="frame" x="0.0" y="38.5" width="414" height="59.5"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.50588235290000005" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="rect" keyPath="textContainerInset">
+                            <rect key="value" x="12" y="12" width="12" height="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="6W7-sb-cR4" id="wCQ-0v-Tgi"/>
+                    </connections>
+                </textView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6C-eD-JZk">
+                    <rect key="frame" x="370" y="38.5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="E2a-tp-YDn"/>
+                        <constraint firstAttribute="height" constant="44" id="pEY-5i-PNA"/>
+                    </constraints>
+                    <state key="normal" image="icon_arrow_right_24"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fNo-m8-Wiw" firstAttribute="trailing" secondItem="h6C-eD-JZk" secondAttribute="trailing" id="1Zr-6p-cTf"/>
+                <constraint firstItem="h6C-eD-JZk" firstAttribute="top" secondItem="OiZ-Bw-JaP" secondAttribute="top" id="HAS-h4-cW0"/>
+                <constraint firstAttribute="trailing" secondItem="VSD-cJ-UEA" secondAttribute="trailing" id="Vr8-dp-Qju"/>
+                <constraint firstAttribute="trailing" secondItem="OiZ-Bw-JaP" secondAttribute="trailing" id="Zsc-DB-86r"/>
+                <constraint firstItem="OiZ-Bw-JaP" firstAttribute="top" secondItem="VSD-cJ-UEA" secondAttribute="bottom" constant="8" id="bZk-Ot-tL7"/>
+                <constraint firstItem="OiZ-Bw-JaP" firstAttribute="leading" secondItem="6W7-sb-cR4" secondAttribute="leading" id="fKG-Cx-TG0"/>
+                <constraint firstItem="VSD-cJ-UEA" firstAttribute="leading" secondItem="6W7-sb-cR4" secondAttribute="leading" id="hyP-a9-DTd"/>
+                <constraint firstItem="VSD-cJ-UEA" firstAttribute="top" secondItem="6W7-sb-cR4" secondAttribute="top" constant="14" id="psQ-aI-uQd"/>
+                <constraint firstAttribute="bottom" secondItem="OiZ-Bw-JaP" secondAttribute="bottom" constant="12" id="zdG-TO-D3a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fNo-m8-Wiw"/>
+            <connections>
+                <outlet property="dropDownButton" destination="h6C-eD-JZk" id="dMI-s1-c0h"/>
+                <outlet property="fieldTextView" destination="OiZ-Bw-JaP" id="luh-V0-aRX"/>
+                <outlet property="titleLabel" destination="VSD-cJ-UEA" id="2Ap-GO-gUD"/>
+            </connections>
+            <point key="canvasLocation" x="834.78260869565224" y="-85.714285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_arrow_right_24" width="24" height="24"/>
+    </resources>
+</document>
